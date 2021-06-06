@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-icon slot="icon-only" name="power" (click)="CreatePopover()"></ion-icon>
+    </ion-buttons>
+    <ion-title>IES Cristóbal de Monroy</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      
+      <ion-tab-button tab="home">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="sign">
+        <ion-icon name="logo-sass"></ion-icon>
+        <ion-label>Firma</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="profile">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Soporte</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

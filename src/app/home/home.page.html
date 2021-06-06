@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>IES Cristóbal de Monroy</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-text color="secondary">
+    <h1>INICIO</h1>
+  </ion-text>
+
+  <ion-grid>
+      <!--Horario-->
+      <ion-card>
+        <ion-tab-button class="ion-activatable ripple-parent homeButton" tab="schedule">
+          <img src="https://thumbs.dreamstime.com/b/school-schedule-18769684.jpg">
+          <div class="card-title">Horario</div>
+          <div class="card-subtitle">Tu día a día</div>     
+        </ion-tab-button>
+      </ion-card>
+
+      <!--Guardias-->
+      <ion-card>
+        <ion-tab-button class="ion-activatable ripple-parent homeButton" expand="block" tab="guardias">
+          <img src="https://eoimarbella.es/wp-content/uploads/2018/11/2548814910_b69b8cf51b_b-1024x683.jpg">
+          <div class="card-title">Guardias</div>
+          <div class="card-subtitle">Ausencia de profesores</div>
+        </ion-tab-button>
+      </ion-card>
+
+      <!--Incidencias-->
+      <ion-card>
+        <ion-tab-button class="ion-activatable ripple-parent homeButton" expand="block" tab="issues">
+          <img src="https://image.freepik.com/foto-gratis/boton-rojo-admiracion_1156-659.jpg">
+          <div class="card-title">Incidencias</div>
+          <div class="card-subtitle">Notifica eventualidades adversas</div>
+        </ion-tab-button>
+      </ion-card> 
+  </ion-grid>
+</ion-content>

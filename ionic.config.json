@@ -1,0 +1,7 @@
+{
+  "name": "ionicMonroy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

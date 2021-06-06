@@ -1,0 +1,141 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>schedule</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-text color="secondary">
+    <h1>Horarios</h1>
+  </ion-text>
+
+  <ion-text color="tertiary" class="second-title">
+    <h2>Tu horario de hoy {{today | date: 'dd/MM/yyyy'}} </h2>
+  </ion-text>
+
+
+
+
+
+  <ul>
+    <li *ngFor="let horario of horarioRef">
+
+
+      <ion-row class="top-row">
+        <ion-col col-1>
+          <ion-label>Hora</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-label>Asignación</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row style="border-bottom: groove;">
+        <ion-col col-1>
+          <ion-label>8:15</ion-label>
+        </ion-col>
+        <ion-col id="1">
+          <ng-container *ngIf="horario.hora === 1">
+            {{ horario.aula }}
+            {{ horario.curso }}
+            {{ horario.materia }}
+          </ng-container>
+
+        </ion-col>
+      </ion-row>
+      <ion-row style="border-bottom: groove;">
+        <ion-col col-1>
+          <ion-label>9:15</ion-label>
+        </ion-col>
+        <ion-col>
+          <!-- <ng-container *ngIf="horario.hora === 2">
+            {{ horario.aula }}
+            {{ horario.curso }}
+            {{ horario.materia }}
+          </ng-container> -->
+
+        </ion-col>
+      </ion-row>
+      <ion-row style="border-bottom: groove;">
+        <ion-col col-1>
+          <ion-label>10:15</ion-label>
+        </ion-col>
+        <ion-col>
+          <!-- <ng-container *ngIf="horario.hora === 3">
+            {{ horario.aula }}
+            {{ horario.curso }}
+            {{ horario.materia }}
+          </ng-container> -->
+
+        </ion-col>
+      </ion-row>
+      <ion-row style="border-bottom: groove;">
+        <ion-col col-1>
+          <ion-label>11:15</ion-label>
+        </ion-col>
+        <ion-col>
+          RECREO
+        </ion-col>
+      </ion-row>
+      <ion-row style="border-bottom: groove;">
+        <ion-col col-1>
+          <ion-label>11:45</ion-label>
+        </ion-col>
+        <ion-col id="4">
+
+        </ion-col>
+      </ion-row>
+      <ion-row style="border-bottom: groove;">
+        <ion-col col-1>
+          <ion-label>12:45</ion-label>
+        </ion-col>
+        <ion-col id="5">
+
+        </ion-col>
+      </ion-row>
+      <ion-row style="border-bottom: groove;">
+        <ion-col col-1>
+          <ion-label>13:45</ion-label>
+        </ion-col>
+        <ion-col id="6">
+
+        </ion-col>
+      </ion-row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {{ horario.hora }}
+      {{ horario.aula }}
+      {{ horario.curso }}
+      {{ horario.materia }}
+    </li>
+  </ul>
+
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>guardias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab slot="fixed" vertical="top" horizontal="end">
+    <ion-fab-button (click)="crearGuardia()">Añadir</ion-fab-button>
+  </ion-fab>
+
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>
+        Añadir guardia
+      </ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Profesor</ion-label>
+      <ion-select [(ngModel)]="profesorSeleccionado" placeholder="Seleccione el profesor/a" aria-required="true">
+        <ion-select-option *ngFor="let profesor of profesores" [value]="profesor">
+          {{profesor.Empleado}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fecha</ion-label>
+      <ion-datetime displayFormat="DD MMM YYYY" placeholder="Seleccione el día" [(ngModel)]="fechaGuardia"  [min]="minDate" [max]="2050-01-01">
+
+      </ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ul>
+        <li *ngFor="let guardia of listaGuardias">
+          {{ guardia.nombreProfesor }}
+          {{ guardia.curso }}
+          {{ guardia.aula }}
+          <ion-button shape="round" size="small" (click)="eliminarGuardia(guardia.key)">X</ion-button>
+        </li>
+      </ul>
+    </ion-item>
+
+
+  </ion-list>
+
+
+
+</ion-content>

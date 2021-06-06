@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Firma</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-text color="secondary">
+    <h1>Firma</h1>
+  </ion-text>
+  <ion-card class="welcome-card">
+    <img src="/assets/scan.jpeg" alt="" />
+    <ion-card-header>
+      <ion-card-title> Firma mediante QR </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Pulsa el botón para acceder a la cámara y picar en tu horario.</p>
+    </ion-card-content>
+    <ion-button expand='block' margin (click)="presentToast()">Click para firmar</ion-button>
+  </ion-card>
+</ion-content>

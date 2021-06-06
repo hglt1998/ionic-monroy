@@ -1,0 +1,57 @@
+<ion-header [translucent]="true" style="margin-top: 5vh;">
+  <ion-toolbar>
+    <ion-title>
+      <img class="imgCabecera" src="../../assets/img/logo.png" />
+    </ion-title>
+   <!--  <ion-title class="tituloApp">
+      Monroy pasen
+    </ion-title> -->
+  </ion-toolbar>
+
+  <!-- <div class="down-arrow"></div> -->
+</ion-header>
+
+
+
+<ion-content class="auth-form" [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-center>
+
+        <span class="divider line one-line">Gestión interna</span>
+
+        <h1 class="already">Login</h1>
+        <p class="xsmall-text">Acceso a la gestión interna del instituto</p>
+
+        <form>
+          <ion-item lines="full">
+            <ion-label position="floating">
+              <ion-icon name="person-outline"class="colorNofocus"></ion-icon>
+              <ion-text color="light" class="ion-padding-start colorNofocus">Email</ion-text>
+            </ion-label>
+            <ion-input type="text" #email required></ion-input>
+          </ion-item>
+
+          <ion-item lines="full">
+            <ion-label position="floating">
+              <ion-icon name="lock-closed-outline" class="colorNofocus"></ion-icon>
+              <ion-text color="light" class="ion-padding-start colorNofocus">Contraseña</ion-text>
+            </ion-label>
+            <ion-input type="password" #password required></ion-input>
+          </ion-item>
+
+          <ion-row>
+            <ion-col>
+              <a [routerLink]="['/forgot-password']" class="ion-text-right ion-float-right small-text enlace">
+                Recuperar la constraseña
+              </a>
+              <ion-button (click)="login(email.value, password.value)" type="submit" color="warning" expand="block" class="boton-login">
+                Acceder
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>issues</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+    <ion-list>
+
+      <ion-item>
+        <ion-label position="floating">Correo electrónico</ion-label>
+        <ion-input formControlName="email" inputmode="email" autocomplete="email" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Asunto</ion-label>
+        <ion-input formControlName="subject" autocomplete="off" type="search"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Mensaje</ion-label>
+        <ion-input formControlName="body" required></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="danger" expand="block">Enviar</ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-list>
+  </form>
+</ion-content>

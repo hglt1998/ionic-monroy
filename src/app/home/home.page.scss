@@ -1,0 +1,85 @@
+* {
+  font-family: 'Alegreya Sans SC', sans-serif, 100;
+  margin: 0%;
+  padding: 0%;
+}
+
+ion-card {
+  position: relative;
+  text-align: center;
+  margin: 0%;
+}
+
+ion-grid {
+  align-content: center;
+}
+
+img {
+  filter: blur(.5px);
+  filter: contrast(60%);
+}
+
+.card-title{
+  position: absolute;
+  top: 36%;
+  font-size: 2.0em;
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.card-subtitle {
+  font-size: 1.0em;
+  position: absolute;
+  top: 52%;
+  width: 100%;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.ripple-parent {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-center{
+  color: #2cd316;
+  text-align: center;
+  font-size: 150%;
+}
+
+.homeButton {
+  background: #3880ff !important; /* Esto no lo está cogiendo */
+  margin: 5%;
+}
+
+h1 {
+  text-align: center;
+  margin: 5px;
+}
